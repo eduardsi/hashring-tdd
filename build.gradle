@@ -1,0 +1,24 @@
+apply plugin: 'java'
+apply plugin: 'groovy'
+
+sourceCompatibility = 1.7
+targetCompatibility = 1.7
+
+group = 'lv.craftsmans.groovy.cukes'
+
+repositories {
+    mavenCentral()
+    mavenLocal()
+}
+
+
+dependencies {
+    compile 'com.google.guava:guava:16.0.1'
+    testCompile 'org.codehaus.groovy:groovy-all:2.2.2'
+    testCompile 'org.spockframework:spock-core:0.7-groovy-2.0'
+
+}
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '1.11'
+}
